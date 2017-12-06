@@ -4,20 +4,23 @@ set -e
 
 if [ $# -lt 3 ]; then
     echo "Usage: "
-    echo "     ./restore.sh <docker_name> <path> <database_name>"
+    echo "     ./restore.sh <docker_name> <database_name> <dump_path>"
     echo "Options: "
     echo "     docker_name: the mongodb docker container name or id "
-    echo "     path: the path including the mongodb dump files "
     echo "     database_name: the mongodb database to restore "
+    echo "     dump_path: the path including the mongodb dump files "
     exit 1;
 fi
 
-if [ ! -e $2 ]; then
-    echo "The path '$2' not existed"
+if [ ! -e $3 ]; then
+    echo "The path '$3' not existed"
     exit 1;
 fi
 
-BACKUP_PATH=/tmp/backup/$(date +%Y_%m_%d_%H_%M)
-docker exec $1 mkdir -p $BACKUP_PATH
-docker cp $2/ $1:$BACKUP_PATH/
-docker exec $1 mongorestore -d $3 --drop $BACKUP_PATH
+DOCKER=$1
+DUMP_PATH=$3
+BACKUP_PATH=$(date +%Y_%m_%d_%H_%M)
+
+docker exec $DOCKER mkdir -p /tmp/backup/
+docker cp $DUMP_PATH/ $DOCKER:/tmp/backup/${BACKUP_PATH}/
+docker exec $DOCKER mongorestore -d $2 --drop /tmp/backup/$BACKUP_PATH
