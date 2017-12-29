@@ -16,9 +16,9 @@ if [ ! -e $3 ]; then
 fi
 
 DOCKER=$1
-DUMP_PATH=$3
-BACKUP_PATH=$(date +%Y_%m_%d_%H_%M)
+DB_NAME=$2
+EXPORT_TO_PATH=$3/$(date +%Y_%m_%d_%H_%M)
 
-docker exec $DOCKER mkdir -p /tmp/backup/
-docker cp $DUMP_PATH/ $DOCKER:/tmp/backup/${BACKUP_PATH}/
-docker exec $DOCKER mongorestore -d $2 --drop /tmp/backup/$BACKUP_PATH
+mkdir -p $EXPORT_TO_PATH
+
+docker exec -i $DOCKER mysqldump -uroot -p $DB_NAME > $EXPORT_TO_PATH/${DB_NAME}.sql
