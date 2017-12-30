@@ -31,9 +31,9 @@ read PASSWORD
 RUN_HEADER='#!/bin/sh -e'
 RUN_BODY="mysqldump -uroot -p$PASSWORD -B $DB_NAME < $DOCKER_RESTORE_PATH/$DB_NAME.sql"
 
-docker exec $DOCKER bash -c "echo \"$RUN_HEADER\" > /run.sh"
-docker exec $DOCKER bash -c "echo \"$RUN_BODY\" >> /run.sh"
-docker exec $DOCKER bash -c "chmod +x /run.sh"
+docker exec $DOCKER bash -c "echo \"$RUN_HEADER\" > /restore.sh"
+docker exec $DOCKER bash -c "echo \"$RUN_BODY\" >> /restore.sh"
 
-docker exec $DOCKER /run.sh
-docker exec $DOCKER rm -f /run.sh
+docker exec $DOCKER chmod +x /restore.sh
+docker exec $DOCKER /restore.sh
+docker exec $DOCKER rm -f /restore.sh
