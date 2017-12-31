@@ -1,0 +1,99 @@
+########## How To Use Docker Image ###############
+##
+##  Image Name: clouthinkin/nginx-php-mysql
+##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/nginx-php5-server/Dockerfile
+##  Docker hub link: https://hub.docker.com/r/clouthinkin/nginx-php5-server/
+##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/nginx-php5-server --rm=true .
+##  Description: Base image for php runtime server with nginx 1.13.7 & php 5.6.31 & mysql client installed and everything is configured.
+##################################################
+# Base Docker image:
+FROM alpine:3.4
+
+LABEL maintainer "melthaw <melthaw@gmail.com>"
+
+ARG APK_FLAGS_COMMON="-q"
+ARG APK_FLAGS_PERSISTANT="${APK_FLAGS_COMMON} --clean-protected --no-cache"
+ARG APK_FLAGS_DEV="${APK_FLAGS_COMMON} --no-cache"
+
+ENV TERM=xterm
+
+ENV HOST_NAME=localhost
+ENV PHP_TZ=Europe/Riga
+
+ENV NGINX_VERSION=1.13.7
+ENV PHP_VERSION=5.6.31
+
+RUN addgroup -S nginx && \
+    adduser -D -S -h /var/cache/nginx -s /sbin/nologin -G nginx nginx && \
+    mkdir -p /usr/share/myphp && \
+    chown --quiet -R nginx:root /usr/share/myphp && \
+    apk update && \
+    apk add ${APK_FLAGS_PERSISTANT} \
+            supervisor \
+            bash \
+            gcc \
+            make \
+            musl-dev \
+            mariadb-client-libs \
+            mariadb-client \
+            nginx \
+            php5-pear \
+            php5-fpm \
+            php5-mysqli \
+            php5-ctype \
+            php5-sockets \
+            php5-gd \
+            php5-gettext \
+            php5-bcmath \
+            php5-xmlreader \
+            php5-ldap \
+            php5-json \
+            php5-dev \
+            autoconf \
+            ttf-dejavu
+
+ADD container_files/etc/ /etc/
+ADD container_files/usr/ /usr/
+ADD container_files/scripts/ /
+ADD container_files/tmp/ /tmp/
+
+RUN cd /tmp && \
+    tar -xzf xdebug-2.5.0.tgz && \
+    cd xdebug-2.5.0 && \
+    /usr/bin/phpize && \
+    ./configure --enable-xdebug && \
+    make && make install
+
+RUN apk add ${APK_FLAGS_DEV} --virtual build-dependencies \
+            coreutils \
+            gettext && \
+    apk del ${APK_FLAGS_COMMON} --purge \
+            build-dependencies && \
+    rm -rf /var/cache/apk/*
+
+# add xdebug configurations
+RUN  echo "zend_extension=$(find / -name xdebug.so)" > /etc/php5/conf.d//xdebug.ini
+RUN { \
+        echo 'xdebug.remote_enable=1'; \
+        echo 'xdebug.remote_autostart=1'; \
+        echo 'xdebug.remote_handler="dbgp"'; \
+        echo 'xdebug.remote_port=9001'; \
+        echo 'xdebug.remote_host=${XDEBUG_REMOTE_HOST}'; \
+        echo 'xdebug.remote_connect_back=0'; \
+        echo 'xdebug.idekey="PHPSTORM"'; \
+    } >> /etc/php5/conf.d//xdebug.ini
+
+RUN chmod +x /*.sh
+
+WORKDIR /usr/share/myphp
+
+EXPOSE 80/TCP 443/TCP
+
+VOLUME ["/etc/ssl/nginx","/usr/share/myphp"]
+
+ENTRYPOINT ["/bin/bash"]
+
+CMD ["/run_server.sh"]
+
+
+

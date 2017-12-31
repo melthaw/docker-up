@@ -1,0 +1,22 @@
+version: '2'
+services:
+  php-server:
+    container_name: php-server
+    build:
+      context: .
+      dockerfile: Dockerfile-debug
+    ports:
+      - '8888:80'
+    depends_on:
+      - php-content
+    volumes_from:
+      - php-content
+    environment:
+      HOST_NAME: "localhost"
+      XDEBUG_REMOTE_HOST: "192.168.31.42"
+      PHP_TZ: "Asia/Shanghai"
+  php-content:
+    container_name: php-content
+    image: busybox:latest
+    volumes:
+      - ./sample/www:/usr/share/myphp/www
