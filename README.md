@@ -30,13 +30,15 @@ clouthinkin/redis | redis 4.0.2
 
 ### nginx + php 5 + mysql client
 
-Please see [Guide](nginx-php5-server/README.md)
+Please see [Guide](images/nginx-php5-server/README.md)
 
 
 ## Helpful scripts
 
-* export mongodb 
-* import mongodb
-* export mysql
-* import mysql
+category | features
+---|---
+mongodb | export(backup)
+ . | restore
+mysql | export(backup)
+ . | restore
 
