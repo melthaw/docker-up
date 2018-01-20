@@ -1,7 +1,7 @@
 ########## How To Use Docker Image ###############
 ##
 ##  Image Name: clouthinkin/golang
-##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/golang/Dockerfile
+##  Git link: https://github.com/melthaw/docker-up/blob/master/images/golang/Dockerfile
 ##  Docker hub link: https://hub.docker.com/r/clouthinkin/golang/
 ##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/golang --rm=true .
 ##  Description: Base image for all golang repos with golang 1.8.4 installed

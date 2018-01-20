@@ -1,7 +1,7 @@
 ########## How To Use Docker Image ###############
 ##
 ##  Image Name: clouthinkin/jre
-##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/jre/Dockerfile
+##  Git link: https://github.com/melthaw/docker-up/blob/master/images/jre/Dockerfile
 ##  Docker hub link: https://hub.docker.com/r/clouthinkin/jre/
 ##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/jre --rm=true .
 ##  Description: Base image for all java repos with jre 8 installed

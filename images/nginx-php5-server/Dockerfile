@@ -1,7 +1,7 @@
 ########## How To Use Docker Image ###############
 ##
 ##  Image Name: clouthinkin/nginx-php-mysql
-##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/nginx-php5-server/Dockerfile
+##  Git link: https://github.com/melthaw/docker-up/blob/master/images/nginx-php5-server/Dockerfile
 ##  Docker hub link: https://hub.docker.com/r/clouthinkin/nginx-php5-server/
 ##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/nginx-php5-server --rm=true .
 ##  Description: Base image for php runtime server with nginx 1.13.7 & php 5.6.31 & mysql client installed and everything is configured.

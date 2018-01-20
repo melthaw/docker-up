@@ -1,7 +1,7 @@
 ########## How To Use Docker Image ###############
 ##
 ##  Image Name: clouthinkin/node
-##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/node/Dockerfile
+##  Git link: https://github.com/melthaw/docker-up/blob/master/images/node/Dockerfile
 ##  Docker hub link: https://hub.docker.com/r/clouthinkin/node/
 ##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/node --rm=true .
 ##  Description: Base image for nodejs with node 8 installed

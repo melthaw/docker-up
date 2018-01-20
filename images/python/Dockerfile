@@ -1,7 +1,7 @@
 ########## How To Use Docker Image ###############
 ##
 ##  Image Name: clouthinkin/python
-##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/python/Dockerfile
+##  Git link: https://github.com/melthaw/docker-up/blob/master/images/python/Dockerfile
 ##  Docker hub link: https://hub.docker.com/r/clouthinkin/python/
 ##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/python --rm=true .
 ##  Description: Base image for all python repos with python 2.7 installed
