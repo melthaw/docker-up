@@ -1,0 +1,10 @@
+version: '2'
+services:
+  shadowsock:
+    container_name: shadowsock
+    image: clouthink/shadowsocks
+    ports:
+      - "6187:6187"
+    restart: always
+    volumes:
+      - ./runtime/shadowsocks.json:/etc/shadowsocks.json:rw
