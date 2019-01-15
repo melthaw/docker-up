@@ -2,7 +2,7 @@
 
 if [ $# -lt 3 ]; then
     echo "Usage: "
-    echo "     ./restore.sh <docker_name> <database_name> <export_to_path>"
+    echo "     ./export.sh <docker_name> <database_name> <export_to_path>"
     echo "Options: "
     echo "     docker_name: the mysql docker container name or id "
     echo "     database_name: the mysql database to export "

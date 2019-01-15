@@ -8,7 +8,7 @@
 FROM ubuntu:14.04
 
 ENV VPN_PASSWORD "Change_me"
-ENV SERVER_PORT "6187"
+ENV VPN_PORT "6187"
 
 COPY runtime/shadowsocks.json /etc/shadowsocks.json
 COPY container-files/docker-entrypoint.sh /docker-entrypoint.sh
@@ -20,6 +20,6 @@ RUN apt-get -y update && \
     rm -rf /var/cache/* && \
     rm -rf /tmp/* /var/tmp/* 
 
-EXPOSE ${SERVER_PORT}
+EXPOSE ${VPN_PORT}
 
 ENTRYPOINT /docker-entrypoint.sh
