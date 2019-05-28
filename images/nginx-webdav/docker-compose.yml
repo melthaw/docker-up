@@ -1,0 +1,9 @@
+version: '3'
+services:
+
+  nginx-webdav:
+    container_name: nginx-webdav
+    build: .
+    ports:
+      - '8888:80'
+
