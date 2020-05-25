@@ -9,7 +9,7 @@
 # Base Docker image: https://hub.docker.com/_/python/
 FROM python:2.7-alpine3.6
 
-LABEL maintainer "melthaw@gmail.com"
+LABEL maintainer="melthaw@gmail.com"
 
 RUN apk add --update curl bash lsof && \
     # Clean up

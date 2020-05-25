@@ -9,7 +9,7 @@
 # Base Docker image: https://hub.docker.com/_/golang/
 FROM golang:1.8.4-alpine3.6
 
-LABEL maintainer "melthaw@gmail.com"
+LABEL maintainer="melthaw@gmail.com"
 
 RUN apk add --update curl bash lsof && \
     # Clean up

@@ -9,7 +9,7 @@
 # Base Docker image: https://hub.docker.com/r/mhart/alpine-node/
 FROM mhart/alpine-node:8
 
-LABEL maintainer "melthaw@gmail.com"
+LABEL maintainer="melthaw@gmail.com"
 
 RUN apk add --update curl bash lsof && \
     # Clean up

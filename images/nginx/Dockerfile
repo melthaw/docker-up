@@ -10,7 +10,7 @@
 # Base Docker image: https://hub.docker.com/_/nginx/
 FROM nginx:1.13.7-alpine
 
-LABEL maintainer "melthaw@gmail.com"
+LABEL maintainer="melthaw@gmail.com"
 
 RUN apk add --update curl bash lsof && \
     # Clean up

@@ -9,7 +9,7 @@
 # Base Docker image: https://hub.docker.com/_/redis/
 FROM redis:alpine
 
-LABEL maintainer "melthaw@gmail.com"
+LABEL maintainer="melthaw@gmail.com"
 
 RUN apk add --update curl bash lsof && \
     # Clean up

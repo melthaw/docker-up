@@ -8,7 +8,7 @@
 # Base Docker image: https://hub.docker.com/_/ubuntu/
 from ubuntu:16.04
 
-LABEL maintainer "melthaw@gmail.com"
+LABEL maintainer="melthaw@gmail.com"
 
 ARG APT_FLAGS_COMMON="-qq -y"
 ARG APT_FLAGS_PERSISTANT="${APT_FLAGS_COMMON} --no-install-recommends"
