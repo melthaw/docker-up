@@ -8,7 +8,7 @@ The toolkits for docker devops.
 
 ## Minmized images
 
-[mini docker @ docker hub](https://hub.docker.com/u/nextoa/)
+[mini docker @ docker hub](https://hub.docker.com/u/clouthinkin/)
 
 All based on the mini alpine image and add following supports:
 * bash
@@ -19,14 +19,14 @@ And the version is
 
 IMAGE NAME | VERSION
 ---|---
-nextoa/jdk8 | jdk 8
-nextoa/jre8 | jre 8
-nextoa/golang | golang 1.8.4
-nextoa/node | node 8
-nextoa/python | python 2.7
-nextoa/nginx | nginx 1.13.7
-nextoa/redis | redis 4.0.2 
-nextoa/networking | ubuntu 16.04 + traceroute + bridge-utils + uml-utilities + tcpdump
+clouthinkin/jdk8 | jdk 8
+clouthinkin/jre8 | jre 8
+clouthinkin/golang | golang 1.8.4
+clouthinkin/node | node 8
+clouthinkin/python | python 2.7
+clouthinkin/nginx | nginx 1.13.7
+clouthinkin/redis | redis 4.0.2 
+clouthinkin/networking | ubuntu 16.04 + traceroute + bridge-utils + uml-utilities + tcpdump
 
 ### nginx + php 5 + mysql client
 

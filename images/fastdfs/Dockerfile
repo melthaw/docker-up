@@ -1,8 +1,8 @@
 ########## How To Use Docker Image ###############
-##  Image Name: nextoa/fastdfs
+##  Image Name: clouthinkin/fastdfs
 ##  Git link: https://github.com/melthaw/docker-up/blob/master/images/fastdfs/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/nextoa/fastdfs/
-##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/fastdfs --rm=true .
+##  Docker hub link: https://hub.docker.com/r/clouthinkin/fastdfs/
+##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/fastdfs --rm=true .
 ##################################################
 # Base Docker image: https://hub.docker.com/r/season/fastdfs/
 from season/fastdfs:1.2

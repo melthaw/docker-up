@@ -1,7 +1,7 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: nextoa/shadowsocks
-##  Build Scripts: docker build -t nextoa/shadowsocks:latest --rm=true .
+##  Image Name: clouthinkin/shadowsocks
+##  Build Scripts: docker build -t clouthinkin/shadowsocks:latest --rm=true .
 ##  Image link: https://github.com/melthaw/docker-up/blob/images/shadowsocks
 ##
 ##################################################
