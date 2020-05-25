@@ -19,8 +19,8 @@ And the version is
 
 IMAGE NAME | VERSION
 ---|---
-clouthinkin/jdk | jdk 8
-clouthinkin/jre | jre 8
+clouthinkin/jdk8 | jdk 8
+clouthinkin/jre8 | jre 8
 clouthinkin/golang | golang 1.8.4
 clouthinkin/node | node 8
 clouthinkin/python | python 2.7
