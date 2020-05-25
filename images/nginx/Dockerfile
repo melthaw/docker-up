@@ -1,9 +1,9 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: clouthinkin/nginx
+##  Image Name: nextoa/nginx
 ##  Git link: https://github.com/melthaw/mini-docker-images/blob/master/images/nginx/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/clouthinkin/nginx/
-##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/nginx --rm=true .
+##  Docker hub link: https://hub.docker.com/r/nextoa/nginx/
+##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/nginx --rm=true .
 ##  Description: Base image for nginx with tools
 ##
 ##################################################

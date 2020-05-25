@@ -1,9 +1,9 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: clouthinkin/jre
+##  Image Name: nextoa/jre
 ##  Git link: https://github.com/melthaw/docker-up/blob/master/images/jre/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/clouthinkin/jre/
-##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/jre8 --rm=true .
+##  Docker hub link: https://hub.docker.com/r/nextoa/jre/
+##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/jre8 --rm=true .
 ##  Description: Base image for all java repos with jre 8 installed
 ##################################################
 # Base Docker image: https://hub.docker.com/_/openjdk/

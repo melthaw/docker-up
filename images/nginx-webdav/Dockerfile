@@ -1,9 +1,9 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: clouthinkin/nginx-webdav
+##  Image Name: nextoa/nginx-webdav
 ##  Git link: https://github.com/melthaw/docker-up/blob/master/images/nginx-webdav/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/clouthinkin/nginx-webdav/
-##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/nginx-webdav --rm=true .
+##  Docker hub link: https://hub.docker.com/r/nextoa/nginx-webdav/
+##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/nginx-webdav --rm=true .
 ##  Description: Nginx with webdav module installed.
 ##
 ##################################################

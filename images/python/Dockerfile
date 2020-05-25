@@ -1,9 +1,9 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: clouthinkin/python
+##  Image Name: nextoa/python
 ##  Git link: https://github.com/melthaw/docker-up/blob/master/images/python/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/clouthinkin/python/
-##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/python --rm=true .
+##  Docker hub link: https://hub.docker.com/r/nextoa/python/
+##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/python --rm=true .
 ##  Description: Base image for all python repos with python 2.7 installed
 ##################################################
 # Base Docker image: https://hub.docker.com/_/python/

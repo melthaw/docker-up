@@ -1,9 +1,9 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: clouthinkin/node
+##  Image Name: nextoa/node
 ##  Git link: https://github.com/melthaw/docker-up/blob/master/images/node/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/clouthinkin/node/
-##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/node --rm=true .
+##  Docker hub link: https://hub.docker.com/r/nextoa/node/
+##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/node --rm=true .
 ##  Description: Base image for nodejs with node 8 installed
 ##################################################
 # Base Docker image: https://hub.docker.com/r/mhart/alpine-node/

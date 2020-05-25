@@ -1,8 +1,8 @@
 ########## How To Use Docker Image ###############
-##  Image Name: clouthinkin/network
+##  Image Name: nextoa/network
 ##  Git link: https://github.com/melthaw/docker-up/blob/master/images/networking/Dockerfile
-##  Docker hub link: https://hub.docker.com/r/clouthinkin/networking/
-##  Build docker image: docker build --no-cache -f Dockerfile -t clouthinkin/networking --rm=true .
+##  Docker hub link: https://hub.docker.com/r/nextoa/networking/
+##  Build docker image: docker build --no-cache -f Dockerfile -t nextoa/networking --rm=true .
 ##  Description: unbuntu + traceroute + brctl+ tcpdump
 ##################################################
 # Base Docker image: https://hub.docker.com/_/ubuntu/
